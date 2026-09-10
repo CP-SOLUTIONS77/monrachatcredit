@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Mon Rachat Crédit",
   },
   verification: {
-    google: "xPxITOWwg2X_lJCmk29M-7ZkEi205hnQVhQFpvVCvsI",
+    google: "qJFaDuQ82TL2HwbmMNAOAE6-5TZf7a2H0gA_Of3iPI8",
   },
 };
 
