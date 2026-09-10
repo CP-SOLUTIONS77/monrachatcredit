@@ -42,6 +42,11 @@ export function SiteFooter() {
           <p className="font-heading font-semibold text-neutral-900">Informations</p>
           <ul className="mt-2 space-y-1">
             <li>
+              <a href="https://monpretassure.fr" className="hover:text-navy">
+                Assurance emprunteur
+              </a>
+            </li>
+            <li>
               <Link href="/mentions-legales" className="hover:text-navy">
                 Mentions légales
               </Link>
