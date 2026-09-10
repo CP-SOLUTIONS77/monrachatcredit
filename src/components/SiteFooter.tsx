@@ -8,16 +8,22 @@ export function SiteFooter() {
         <div>
           <p className="font-heading font-semibold text-navy">Mon Rachat Crédit</p>
           <p className="mt-2 text-sm text-neutral-900/70">
-            Un service de courtage porté par CP Solutions, cabinet de courtage en
-            assurances et en crédits à Montereau-Fault-Yonne.
+            Un service de courtage porté par{" "}
+            <a href="https://cpsolutions77.com" className="underline hover:text-navy">
+              CP Solutions
+            </a>
+            , cabinet de courtage en assurances et en crédits à
+            Montereau-Fault-Yonne.
           </p>
-          <Image
-            src="/photos/logo.png"
-            alt="CP Solutions"
-            width={608}
-            height={220}
-            className="mt-4 h-8 w-auto"
-          />
+          <a href="https://cpsolutions77.com" aria-label="CP Solutions">
+            <Image
+              src="/photos/logo.png"
+              alt="CP Solutions"
+              width={608}
+              height={220}
+              className="mt-4 h-8 w-auto"
+            />
+          </a>
         </div>
 
         <div className="text-sm text-neutral-900/70">
