@@ -47,6 +47,11 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
+              <Link href="/blog" className="hover:text-navy">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/mentions-legales" className="hover:text-navy">
                 Mentions légales
               </Link>
