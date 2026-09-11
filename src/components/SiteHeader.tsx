@@ -4,6 +4,7 @@ const NAV_LINKS = [
   { href: "/comment-ca-marche", label: "Comment ça marche" },
   { href: "/rachat-immobilier", label: "Rachat immobilier" },
   { href: "/rachat-conso", label: "Rachat conso" },
+  { href: "/blog", label: "Blog" },
   { href: "/a-propos", label: "Le cabinet" },
   { href: "/contact", label: "Contact" },
 ];
