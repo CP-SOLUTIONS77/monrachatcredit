@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Simuler mon rachat de crédit",
   description:
     "Estimez gratuitement votre nouvelle mensualité après regroupement de crédits.",
+  alternates: { canonical: "/simulateur" },
 };
 
 export default function SimulateurPage() {

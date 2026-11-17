@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { VILLES } from "@/lib/villes";
 
 const ROUTES = [
   "",
@@ -20,9 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${route}`,
     lastModified: new Date(),
   }));
+  const villes = ["/rachat-de-credit", ...VILLES.map((v) => `/rachat-de-credit/${v.slug}`)].map(
+    (route) => ({ url: `${base}${route}`, lastModified: new Date() }),
+  );
   const articles = getAllPosts().map((post) => ({
     url: `${base}/blog/${post.slug}`,
     lastModified: new Date(post.date),
   }));
-  return [...pages, ...articles];
+  return [...pages, ...villes, ...articles];
 }

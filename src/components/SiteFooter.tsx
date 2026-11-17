@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { VILLES } from "@/lib/villes";
 
 export function SiteFooter() {
   return (
@@ -68,6 +69,23 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6 pb-8 text-sm text-neutral-900/70">
+        <p className="font-heading font-semibold text-neutral-900">
+          <Link href="/rachat-de-credit" className="hover:text-navy">
+            Rachat de crédit près de chez vous
+          </Link>
+        </p>
+        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+          {VILLES.map((ville) => (
+            <li key={ville.slug}>
+              <Link href={`/rachat-de-credit/${ville.slug}`} className="hover:text-navy">
+                {ville.nom}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="border-t border-neutral-100 px-6 py-4 text-center text-xs text-neutral-900/50">
