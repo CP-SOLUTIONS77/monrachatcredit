@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Rachat de crédit immobilier",
   description:
     "Regroupez votre prêt immobilier avec vos autres crédits pour réduire votre mensualité globale ou financer un nouveau projet.",
+  alternates: { canonical: "/rachat-immobilier" },
 };
 
 export default function RachatImmobilierPage() {

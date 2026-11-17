@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Comment ça marche",
   description:
     "Les étapes d'un rachat de crédit : étude du dossier, comparaison des banques, négociation, signature et déblocage des fonds.",
+  alternates: { canonical: "/comment-ca-marche" },
 };
 
 const STEPS = [

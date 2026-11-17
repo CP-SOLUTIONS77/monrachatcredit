@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Rachat de crédit à la consommation",
   description:
     "Regroupez vos crédits conso, découverts et prêts personnels en une seule mensualité, sans prêt immobilier.",
+  alternates: { canonical: "/rachat-conso" },
 };
 
 export default function RachatConsoPage() {

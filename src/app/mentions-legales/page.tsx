@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mentions légales",
   description: "Informations réglementaires relatives à l'activité d'intermédiaire en opérations de banque et services de paiement.",
+  alternates: { canonical: "/mentions-legales" },
 };
 
 function Row({ label, value }: { label: string; value: string }) {

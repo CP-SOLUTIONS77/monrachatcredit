@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 const OPENING_HOURS = [
   { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "09:30", closes: "12:30" },
-  { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "14:30", closes: "16:30" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "13:30", closes: "16:30" },
   {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
