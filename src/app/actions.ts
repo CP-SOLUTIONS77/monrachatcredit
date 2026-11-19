@@ -16,6 +16,7 @@ const leadSchema = z.object({
   montant: z.string().trim().optional(),
   mensualite: z.string().trim().optional(),
   situation: z.string().trim().optional(),
+  simulation: z.string().trim().optional(),
   source: z.string().trim().min(1),
 });
 
@@ -38,6 +39,7 @@ export async function submitLead(
     montant: formData.get("montant"),
     mensualite: formData.get("mensualite"),
     situation: formData.get("situation"),
+    simulation: formData.get("simulation"),
     source: formData.get("source"),
   });
 
@@ -54,13 +56,14 @@ export async function submitLead(
     };
   }
 
-  const { firstname, lastname, email, phone, message, montant, mensualite, situation, source } =
+  const { firstname, lastname, email, phone, message, montant, mensualite, situation, simulation, source } =
     parsed.data;
 
   const details = [
     montant && `Montant total des crédits à regrouper : ${montant}`,
     mensualite && `Mensualités actuelles : ${mensualite}`,
     situation && `Situation : ${situation}`,
+    simulation && `Simulation faite sur le site :\n${simulation}`,
     message && `Message : ${message}`,
   ]
     .filter(Boolean)

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { CreditSimulator } from "@/components/CreditSimulator";
-import { LeadForm } from "@/components/LeadForm";
+import { SimulateurRachat } from "@/components/SimulateurRachat";
 
 export const metadata: Metadata = {
   title: "Simuler mon rachat de crédit",
@@ -21,20 +20,7 @@ export default function SimulateurPage() {
         étudié.
       </p>
 
-      <div className="mt-8">
-        <CreditSimulator />
-      </div>
-
-      <h2 className="mt-16 font-heading text-2xl font-semibold text-navy">
-        Passons à l&apos;étude de votre dossier
-      </h2>
-      <p className="mt-2 text-neutral-900/70">
-        Laissez-nous vos coordonnées, gratuit et sans engagement. On vous
-        rappelle sous 48h avec une proposition réelle.
-      </p>
-      <div className="mt-6">
-        <LeadForm source="simulateur" withProjectFields submitLabel="Démarrer ma simulation" />
-      </div>
+      <SimulateurRachat />
     </div>
   );
 }

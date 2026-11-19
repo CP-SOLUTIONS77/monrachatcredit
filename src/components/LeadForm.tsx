@@ -30,10 +30,13 @@ export function LeadForm({
   source,
   withProjectFields = false,
   submitLabel = "Envoyer ma demande",
+  simulation,
 }: {
   source: string;
   withProjectFields?: boolean;
   submitLabel?: string;
+  /** Résultat du simulateur, transmis avec la demande pour ne pas le faire ressaisir. */
+  simulation?: string;
 }) {
   const [state, formAction] = useActionState(submitLead, initialState);
 
@@ -52,6 +55,7 @@ export function LeadForm({
   return (
     <form action={formAction} className="space-y-5">
       <input type="hidden" name="source" value={source} />
+      {simulation && <input type="hidden" name="simulation" value={simulation} />}
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
@@ -111,7 +115,14 @@ export function LeadForm({
         </div>
       </div>
 
-      {withProjectFields && (
+      {withProjectFields && simulation && (
+        <div className="rounded-2xl bg-navy/5 p-4 text-sm text-neutral-900">
+          <p className="font-semibold text-navy">Votre simulation sera jointe à la demande</p>
+          <p className="mt-1 whitespace-pre-line text-neutral-900/70">{simulation}</p>
+        </div>
+      )}
+
+      {withProjectFields && !simulation && (
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="montant" className="text-sm font-medium text-neutral-900">
