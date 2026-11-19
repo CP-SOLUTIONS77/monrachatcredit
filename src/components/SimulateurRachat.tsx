@@ -17,7 +17,7 @@ export function SimulateurRachat() {
       [
         `Crédits à regrouper : ${euros(r.capital)}`,
         `Mensualités actuelles : ${euros(r.mensualiteActuelle)} par mois`,
-        `Durée souhaitée : ${r.dureeAnnees} ans, au taux indicatif de ${r.taux.toFixed(1)} %`,
+        `Durée souhaitée : ${r.dureeAnnees} ans, au taux indicatif de ${r.taux.toFixed(1).replace(".", ",")} %`,
         `Nouvelle mensualité estimée : ${euros(r.nouvelleMensualite)} par mois`,
       ].join("\n"),
     );
